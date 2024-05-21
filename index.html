@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task2</title>
+  <link rel="stylesheet" href="./css/normalize.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <form id="form">
+    <h3>Транспортные средства и водители</h3>
+    <label for="carNumber">Госномер</label>
+    <input type="text" id="carNumber" name="carNumber" placeholder="Укажите гос-номер" />
+    <p id="carNumberError" class="message"></p>
+
+    <label for="carName">Транспортное средство</label>
+    <input type="text" id="carName" name="carName" placeholder="Транспортное средство" />
+    <p id="carNameError" class="message"></p>
+
+    <label for="carDateArrive">Ориентировочная дата прибытия покупателя</label>
+    <input type="text" id="carDateArrive" name="carDateArrive" placeholder="Дата*" />
+    <p id="carDateArriveError" class="message"></p>
+
+    <h3>Данные о водителе</h3>
+
+    <label for="FIO">ФИО</label>
+    <input type="text" id="FIO" name="FIO" placeholder="Укажите ФИО водителя" />
+    <p id="FIOError" class="message"></p>
+
+    <label for="passport">Паспортные данные</label>
+    <div class="passport">
+      <input class="passport_series" type="number" id="passportSeries" name="passportSeries" placeholder="Серия" min="0"
+        max="9999" oninput="this.value=this.value.slice(0,4)" />
+      <input class="passport_number" type="number" id="passportNumber" name="passportNumber" placeholder="Номер" min="0"
+        max="999999" oninput="this.value=this.value.slice(0,6)" />
+    </div>
+    <p id="passportError" class="message"></p>
+
+    <label for="passport">Кем выдан</label>
+    <input type="text" id="passportIssued" name="passportIssued" placeholder="Кем выдан" />
+    <p id="passportIssuedError" class="message"></p>
+
+    <label for="date">Когда выдан</label>
+    <input type="text" id="passportDate" name="passpoerDate" placeholder="Когда выдан" onfocus="this.type='date'"
+      onblur="this.type='text'" />
+    <p id="passportDateError" class="message"></p>
+    <div class="btn">
+      <button type="submit" class="btn_left">Отправить</button>
+      <button type="button" id="btnRight" class="btn_right">Отменить</button>
+    </div>
+  </form>
+  <script src="/main.js"></script>
+</body>
+
+</html>

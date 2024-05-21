@@ -1,0 +1,116 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 440px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: gray;
+  margin: 10px 0px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  min-width: 400px;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: white;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input {
+  margin-bottom: 15px;
+  padding: 5px;
+}
+
+input::placeholder {
+  font-size: 12px;
+  color: lightgrey;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:focus {
+  color: white;
+  background-color: black;
+}
+
+button:hover {
+  background-color: blue;
+}
+
+button:active {
+  background-color: gray;
+}
+
+.container {
+  padding: 0 75px;
+  background-color: white;
+  margin: 0 auto;
+}
+
+.passport {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.passport_series {
+  min-width: 200px;
+}
+
+.passport_number {
+  min-width: 200px;
+}
+
+.btn {
+  display: flex;
+}
+
+.btn_left {
+  margin-right: 15px;
+  background-color: white;
+}
+
+.btn_right {
+  background-color: white;
+}
+
+.message {
+  color: rgb(240, 10, 80);
+  font-weight: bold;
+  display: none;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.visible {
+  display: block;
+}
+
+.invalid {
+  background-color: rgb(232, 206, 219);
+}
